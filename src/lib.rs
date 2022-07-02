@@ -89,7 +89,7 @@ impl Spotify {
             }
             Method::DELETE => {
                 client
-                    .put(url)
+                    .delete(url)
                     .bearer_auth(self.authorization.as_str())
                     .send()
                     .unwrap();
